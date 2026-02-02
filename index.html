@@ -9,13 +9,12 @@
         margin: 0;
         padding: 0;
 
-        /* 🌌 ARKA PLAN RESMİ */
+        /* 🌌 ARKA PLAN */
         background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
 
-        color: #00ff99;
         font-family: monospace;
         display: flex;
         justify-content: center;
@@ -24,12 +23,12 @@
         text-align: center;
     }
 
-    /* ARKA PLAN KARARTMA (yazılar net görünsün diye) */
+    /* KARARTMA */
     body::before {
         content: "";
         position: fixed;
         inset: 0;
-        background: rgba(0,0,0,0.6);
+        background: rgba(0,0,0,0.65);
         z-index: -1;
     }
 
@@ -39,30 +38,32 @@
 
     @keyframes glow {
         from {
-            text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99;
+            text-shadow: 0 0 15px #00ff99, 0 0 30px #00ff99;
         }
         to {
-            text-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99;
+            text-shadow: 0 0 50px #00ff99, 0 0 100px #00ff99;
         }
     }
 
-    /* 🔥 DAHA GÜÇLÜ TİTREŞİM */
+    /* 💀 ULTRA MAX TİTREŞİM */
     @keyframes titreme {
-        0%   { transform: translate(0, 0); }
-        10%  { transform: translate(-2px, -2px); }
-        20%  { transform: translate(2px, -2px); }
-        30%  { transform: translate(-2px, 2px); }
-        40%  { transform: translate(2px, 2px); }
-        50%  { transform: translate(-3px, 1px); }
-        60%  { transform: translate(3px, -1px); }
-        70%  { transform: translate(-2px, 2px); }
-        80%  { transform: translate(2px, -2px); }
-        90%  { transform: translate(-1px, 1px); }
-        100% { transform: translate(0, 0); }
+        0%   { transform: translate(0, 0) rotate(0deg); }
+        5%   { transform: translate(-8px, -8px) rotate(-2deg); }
+        10%  { transform: translate(8px, -8px) rotate(2deg); }
+        15%  { transform: translate(-8px, 8px) rotate(-2deg); }
+        20%  { transform: translate(8px, 8px) rotate(2deg); }
+        30%  { transform: translate(-10px, 4px) rotate(-3deg); }
+        40%  { transform: translate(10px, -4px) rotate(3deg); }
+        50%  { transform: translate(-8px, 6px) rotate(-2deg); }
+        60%  { transform: translate(8px, -6px) rotate(2deg); }
+        70%  { transform: translate(-10px, 8px) rotate(-3deg); }
+        80%  { transform: translate(10px, -8px) rotate(3deg); }
+        90%  { transform: translate(-6px, 6px) rotate(-2deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
     }
 
     .titresin {
-        animation: titreme 0.08s infinite;
+        animation: titreme 0.04s infinite;
     }
 
     /* 🌈 RENK RENK YAZI */
@@ -78,10 +79,10 @@
             violet,
             red
         );
-        background-size: 400% 400%;
+        background-size: 600% 600%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: renk 3s linear infinite;
+        animation: renk 2s linear infinite;
     }
 
     @keyframes renk {
@@ -94,7 +95,7 @@
     }
 
     h1 {
-        font-size: 48px;
+        font-size: clamp(120px, 18vw, 240px);
         cursor: pointer;
     }
 </style>
