@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>XDX Style</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+
+        /* 🌌 ARKA PLAN RESMİ */
+        background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        color: #00ff99;
+        font-family: monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+    /* ARKA PLAN KARARTMA (yazılar net görünsün diye) */
+    body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        z-index: -1;
+    }
+
+    .container {
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99;
+        }
+        to {
+            text-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99;
+        }
+    }
+
+    /* 🔥 DAHA GÜÇLÜ TİTREŞİM */
+    @keyframes titreme {
+        0%   { transform: translate(0, 0); }
+        10%  { transform: translate(-2px, -2px); }
+        20%  { transform: translate(2px, -2px); }
+        30%  { transform: translate(-2px, 2px); }
+        40%  { transform: translate(2px, 2px); }
+        50%  { transform: translate(-3px, 1px); }
+        60%  { transform: translate(3px, -1px); }
+        70%  { transform: translate(-2px, 2px); }
+        80%  { transform: translate(2px, -2px); }
+        90%  { transform: translate(-1px, 1px); }
+        100% { transform: translate(0, 0); }
+    }
+
+    .titresin {
+        animation: titreme 0.08s infinite;
+    }
+
+    /* 🌈 RENK RENK YAZI */
+    .rainbow {
+        background: linear-gradient(
+            90deg,
+            red,
+            orange,
+            yellow,
+            green,
+            cyan,
+            blue,
+            violet,
+            red
+        );
+        background-size: 400% 400%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: renk 3s linear infinite;
+    }
+
+    @keyframes renk {
+        0%   { background-position: 0% 50%; }
+        100% { background-position: 100% 50%; }
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h1 {
+        font-size: 48px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <a href="https://t.me/zorbaAllah" target="_blank">
+        <h1 class="titresin rainbow">𝐂𝐚𝐧 𝐘ı𝐥𝐦𝐚𝐳</h1>
+    </a>
+</div>
+
+</body>
+</html>
