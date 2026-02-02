@@ -10,7 +10,7 @@
         padding: 0;
 
         /* 🌌 ARKA PLAN */
-        background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475");
+        background-image: url("https://share.google/YrGAaaKulfJm73qAU");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -48,22 +48,22 @@
     /* 💀 ULTRA MAX TİTREŞİM */
     @keyframes titreme {
         0%   { transform: translate(0, 0) rotate(0deg); }
-        5%   { transform: translate(-8px, -8px) rotate(-2deg); }
-        10%  { transform: translate(8px, -8px) rotate(2deg); }
-        15%  { transform: translate(-8px, 8px) rotate(-2deg); }
-        20%  { transform: translate(8px, 8px) rotate(2deg); }
-        30%  { transform: translate(-10px, 4px) rotate(-3deg); }
-        40%  { transform: translate(10px, -4px) rotate(3deg); }
-        50%  { transform: translate(-8px, 6px) rotate(-2deg); }
-        60%  { transform: translate(8px, -6px) rotate(2deg); }
-        70%  { transform: translate(-10px, 8px) rotate(-3deg); }
-        80%  { transform: translate(10px, -8px) rotate(3deg); }
-        90%  { transform: translate(-6px, 6px) rotate(-2deg); }
+        5%   { transform: translate(-6px, -6px) rotate(-2deg); }
+        10%  { transform: translate(6px, -6px) rotate(2deg); }
+        15%  { transform: translate(-6px, 6px) rotate(-2deg); }
+        20%  { transform: translate(6px, 6px) rotate(2deg); }
+        30%  { transform: translate(-8px, 4px) rotate(-3deg); }
+        40%  { transform: translate(8px, -4px) rotate(3deg); }
+        50%  { transform: translate(-6px, 6px) rotate(-2deg); }
+        60%  { transform: translate(6px, -6px) rotate(2deg); }
+        70%  { transform: translate(-8px, 8px) rotate(-3deg); }
+        80%  { transform: translate(8px, -8px) rotate(3deg); }
+        90%  { transform: translate(-4px, 4px) rotate(-2deg); }
         100% { transform: translate(0, 0) rotate(0deg); }
     }
 
     .titresin {
-        animation: titreme 0.04s infinite;
+        animation: titreme 0.05s infinite;
     }
 
     /* 🌈 RENK RENK YAZI */
@@ -82,7 +82,7 @@
         background-size: 600% 600%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: renk 2s linear infinite;
+        animation: renk 2.5s linear infinite;
     }
 
     @keyframes renk {
@@ -90,21 +90,36 @@
         100% { background-position: 100% 50%; }
     }
 
+    /* ⚪ BEYAZ TELEGRAM */
+    .white {
+        color: white;
+        text-shadow: 0 0 20px white;
+    }
+
     a {
         text-decoration: none;
+        display: block;
+        margin-top: 20px;
     }
 
     h1 {
-        font-size: clamp(120px, 18vw, 240px);
+        font-size: clamp(80px, 12vw, 150px);
         cursor: pointer;
+        margin: 0;
+    }
+
+    .telegram {
+        font-size: clamp(40px, 6vw, 70px);
     }
 </style>
 </head>
 <body>
 
 <div class="container">
+    <h1 class="titresin rainbow">𝐂𝐚𝐧 𝐘ı𝐥𝐦𝐚𝐳</h1>
+
     <a href="https://t.me/zorbaAllah" target="_blank">
-        <h1 class="titresin rainbow">𝐂𝐚𝐧 𝐘ı𝐥𝐦𝐚𝐳</h1>
+        <h1 class="titresin white telegram">Telegram</h1>
     </a>
 </div>
 
